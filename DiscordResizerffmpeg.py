@@ -42,9 +42,7 @@ for image in image_list:
     time = numpy.arange(0,2*math.pi,math.pi/20)
     i = i+1
     new_image = image.resize((time, time))
-    #sleep(0.1)
     resized_images.append(new_image)
-    #sleep(0.1)
     new_image.save('E:/PythonScripts/save/.resized/image0' + str(i)+'.jpeg')
 
 
