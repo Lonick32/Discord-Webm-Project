@@ -12,20 +12,12 @@ import numpy
 # compile ffmpeg -f concat -i images.txt  -c copy finalvideo.webm
 # sound ffmpeg -f concat -i images.txt  -i rock.ogg -c copy finalvideo.webm
 
-
-
-
-
 # frame by frame
 rock = ffmpeg.input(r"E:/PythonScripts/zigar.mp4")
 out = ffmpeg.output(rock, r"./.frames/image%2d.jpeg")
 out.run()
 
-
-
-
 # resize
-
 a = random.randrange(150, 870)
 b = random.randrange(150, 870)
 i = 0
@@ -44,7 +36,6 @@ for image in image_list:
     new_image = image.resize((time, time))
     resized_images.append(new_image)
     new_image.save('E:/PythonScripts/save/.resized/image0' + str(i)+'.jpeg')
-
 
 # convert jpeg to webm
 i = 0
